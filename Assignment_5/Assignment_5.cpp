@@ -10,10 +10,7 @@ int main()
     std::cout << "Hello World!\n";
 
 	//Intentially intorduce a risk of buffer overflow as a security concern
-	for (int i = 0; i < 100; i++)
-	{
-		smallBuff[i] = 0;
-	}
+	gets(smallBuff);
 
 	return 1;
 }
