@@ -85,14 +85,14 @@ jobs:
     - name: Set up MSBuild
       uses: microsoft/setup-msbuild@v1.1
       
-    - name: Build with MSBuild
+    - name: Build with CMake
       shell: cmd
       run: |
-        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" || ^
-        "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" || ^
-        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\VsDevCmd.bat" || ^
-        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"
-        cl /EHsc SENG_660.cpp
+        mkdir build
+        cd build
+        cmake ../Assignment_5
+        cmake --build . --config Release
+
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
