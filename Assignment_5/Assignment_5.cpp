@@ -5,7 +5,17 @@
 
 int main()
 {
+	int smallBuff[10];
+
     std::cout << "Hello World!\n";
+
+	//Intentially intorduce a risk of buffer overflow as a security concern
+	for (int i = 0; i < 100; i++)
+	{
+		smallBuff[i] = 0;
+	}
+
+	return 1;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
