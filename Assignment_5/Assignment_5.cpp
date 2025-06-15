@@ -5,12 +5,16 @@
 
 int main()
 {
-	int smallBuff[10];
+	char buffer[10];
+	
 
     std::cout << "Hello World!\n";
 
 	//Intentially intorduce a risk of buffer overflow as a security concern
-	gets(smallBuff);
+	for (int i = 0; i < 100; i++)
+	{
+		buffer[i] = 'X';
+	}
 
 	return 1;
 }
