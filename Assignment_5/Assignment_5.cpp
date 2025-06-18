@@ -11,7 +11,7 @@ int main()
     std::cout << "Hello World!\n";
 
 	//Intentially intorduce a risk of buffer overflow as a security concern
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		buffer[i] = 'X';
 	}
