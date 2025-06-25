@@ -7,7 +7,7 @@ int main()
 {
     std::cout << "Hello World!\n";
 
-	std::cout << "Signed commit, again\n";
+	std::cout << "Signed commit, again 3\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
